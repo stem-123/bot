@@ -9,7 +9,10 @@ import json
 from datetime import datetime
 from typing import Optional
 from typing import Literal
-from typing import Optional
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOK    EN")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -359,4 +362,4 @@ async def on_app_command_completion(interaction: discord.Interaction, command: d
 
 
 # --- Bot起動（トークンを入力してください） ---
-bot.run("MTM3NTM3OTUxMDA0ODA2NzYwNQ.GaoA7J._uBzBX0rW9JIVp90Mc8seCTSzNUlwUPQq4uOj0")
+bot.run("TOKEN")
